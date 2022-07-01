@@ -1,0 +1,21 @@
+<h2>Task 2</h2>
+<form novalidate
+ [formGroup]="myForm"
+(ngSubmit)="onSubmit(myForm)"
+>
+
+    <div>
+        <label>E-mail:
+            <input type="email" formControlName="email" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Password:
+            <input type="password" formControlName="password" />
+        </label>
+    </div>
+    <input type="submit" value="Submit" [disabled]="myForm.invalid" />
+</form>
+
+<p>{{result}}</p>

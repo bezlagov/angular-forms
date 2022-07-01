@@ -1,0 +1,23 @@
+<p>Task 4 Form Builder</p>
+<form novalidate [formGroup]="form" (ngSubmit)="onSubmitHandler()" (reset)="onResetHandler()">
+    <label>Username
+        <input type="text" formControlName="username">
+        <div *ngIf="username.invalid && username.dirty">username is required</div>
+    </label>
+    
+    <label>Confirm
+        <input type="checkbox" formControlName="confirm">
+        <div *ngIf="confirm.invalid && username.dirty">this checkbox should be selected</div>
+    </label>
+    <ul>
+        <li formArrayName="hobbies" *ngFor="let item of hobbies.controls; let i=index">{{item.value}}
+        </li >
+    </ul>
+        
+    <input type="text" #newItem [formControlName]="">
+    <input type="button" (click)="addItem(newItem)" value="Add hobbies">
+    <input type="button" (click)="clearItems()" value="Clear hobbies">
+    <hr>
+    <input type="submit" [disabled]="form.valid">
+    <input type="reset">
+</form> 

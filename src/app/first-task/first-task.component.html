@@ -1,0 +1,14 @@
+<h2>Task 1</h2>
+<div>
+    <label>E-mail:
+        <input type="email" [(ngModel)]="email" required placeholder="e-mail" />
+    </label>
+</div>
+<div>
+    <label>
+        Password:
+        <input type="password" [(ngModel)]="password" required placeholder="password" />
+    </label>
+</div>
+<button (click)="onSend()">Send</button>
+<p>{{result}}</p>

@@ -1,0 +1,22 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 150px;
+}
+
+input[type=submit], input[type=reset]{
+    width: 150px;
+}
+
+input.ng-invalid{
+    border: 2px solid #ff000035;
+}
+
+input.ng-valid{
+    border: 2px solid #00ff1535;
+}
